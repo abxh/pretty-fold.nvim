@@ -356,7 +356,7 @@ function M.content(config)
    end
 
    content = content:gsub('%s*$', '')
-   content = content..' '
+   -- content = content..' '
 
    -- Exchange all occurrences of multiple spaces inside the text with
    -- 'fill_char', like this:
