@@ -356,7 +356,7 @@ function M.content(config)
    end
 
    content = content:gsub('%s*$', '')
-   -- content = content..' '
+   content = content..' '
 
    -- Exchange all occurrences of multiple spaces inside the text with
    -- 'fill_char', like this:
@@ -364,7 +364,7 @@ function M.content(config)
    for blank_substr in content:gmatch('%s%s%s+') do
       content = content:gsub(
          blank_substr,
-         ' '..string.rep(config.fill_char, #blank_substr - 2)..' ',
+         ' '..string.rep('A', #blank_substr - 2)..' ',
          1)
    end
 
