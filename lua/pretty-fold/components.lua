@@ -343,7 +343,7 @@ function M.content(config)
    if config.keep_indentation then
       local opening_blank_substr = content:match('^%s%s+')
       if opening_blank_substr then
-         local alt_fillchar = '| '
+         local alt_fillchar = '┆ '
          content = content:gsub(
             opening_blank_substr,
             -- config.fill_char:rep(#opening_blank_substr - 1)..' ',
