@@ -343,12 +343,13 @@ function M.content(config)
    if config.keep_indentation then
       local opening_blank_substr = content:match('^%s%s+')
       if opening_blank_substr then
-         local alt_fillchar = '┆ '
+         local alt_fillchar = ' '
          content = content:gsub(
             opening_blank_substr,
             -- config.fill_char:rep(#opening_blank_substr - 1)..' ',
             -- config.fill_char:rep(fn.strdisplaywidth(opening_blank_substr) - 1)..' ',
-            alt_fillchar:rep(#opening_blank_substr / 2),
+            -- alt_fillchar:rep(#opening_blank_substr / 2),
+            alt_fillchar:rep(fn.strdisplaywidth(opening_blank_substr) - 1)..' ',
             1)
       end
    elseif config.sections.left[1] == 'content' then
