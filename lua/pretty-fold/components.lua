@@ -349,7 +349,7 @@ function M.content(config)
             -- config.fill_char:rep(#opening_blank_substr - 1)..' ',
             -- config.fill_char:rep(fn.strdisplaywidth(opening_blank_substr) - 1)..' ',
             -- alt_fillchar:rep(#opening_blank_substr / 2),
-            alt_fillchar:rep(fn.strdisplaywidth(opening_blank_substr) - 1)..' ',
+            alt_fillchar:rep(fn.strdisplaywidth(opening_blank_substr)),
             1)
       end
    elseif config.sections.left[1] == 'content' then
